@@ -24,18 +24,22 @@ Task link : https://gist.github.com/kotik-adjust/4883e33c439db6de582fd0986939045
 
 case 1:
 Show the number of impressions and clicks that occurred before the 1st of June 2017, broken down by channel and country, sorted by clicks in descending order
+
 http://0.0.0.0:5353/api/v1/query/?groupby=channel,country&sortby=clicks=desc&filterby=date_lt=2017-06-01&aggregate=sum&select=impressions,clicks
 
 case 2:
 Show the number of installs that occurred in May of 2017 on iOS, broken down by date, sorted by date in ascending order.
+
 http://0.0.0.0:5353/api/v1/query/?groupby=day&sortby=day=asc&filterby=date_from=2017-05-01,date_to=2017-05-31,os=ios&aggregate=sum&select=installs
 
 case 3:
 Show revenue, earned on June 1, 2017 in US, broken down by operating system and sorted by revenue in descending order.
+
 http://0.0.0.0:5353/api/v1/query/?groupby=os&sortby=revenue=desc&filterby=date_eq=2017-06-01&aggregate=sum&select=revenue
 
 case 4:
 Show CPI and spend for Canada (CA) broken down by channel ordered by CPI in descending order. Please think carefully which is an appropriate aggregate function for CPI.
+
 http://0.0.0.0:5353/api/v1/query/?groupby=channel&sortby=cpi=desc&filterby=country=ca&aggregate=sum&select=spend&derived=cpi
 
 
